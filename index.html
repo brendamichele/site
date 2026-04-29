@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brenda, Copywriter.</title>
+    
+    <!-- ==========================================
+         🚀 OTIMIZAÇÃO SUPER SEO
+         ========================================== -->
+    <meta name="description" content="Brenda Michele é uma copywriter especialista em conversão. Textos persuasivos e autorais para Landing Pages, VSL, Email Marketing e Social Ads.">
+    <meta name="keywords" content="copywriter, copywriting, freelancer copywriter, copy para lançamentos, landing page, VSL, email marketing, textos que convertem, marketing digital">
+    <meta name="author" content="Brenda Michele">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://brendamichele.com.br/"> <!-- Mude para o seu domínio final -->
+
+    <!-- Open Graph (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brendamichele.com.br/">
+    <meta property="og:title" content="Brenda, Copywriter. | Textos que convertem">
+    <meta property="og:description" content="Copywriting com intenção, estilo e zero clichês. Escrevo para marcas que não têm medo de converter com personalidade.">
+    <meta property="og:image" content="https://sua-imagem-aqui.jpg"> <!-- Link da foto de capa -->
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Brenda, Copywriter. | Textos que convertem">
+    <meta name="twitter:description" content="Copywriting com intenção, estilo e zero clichês.">
+    
+    <!-- Schema Markup (Para o Google entender o seu perfil profissional) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Person",
+      "name": "Brenda Michele",
+      "jobTitle": "Copywriter Especialista em Conversão",
+      "url": "https://brendamichele.com.br/",
+      "sameAs": [
+        "https://www.linkedin.com/in/SEU_LINKEDIN",
+        "https://www.instagram.com/SEU_INSTAGRAM"
+      ],
+      "description": "Copywriter autoral focada em Landing Pages, VSL, Lançamentos e E-mail Marketing.",
+      "knowsAbout": ["Copywriting", "Marketing Digital", "Vendas Online", "Tráfego Pago"]
+    }
+    </script>
+    <!-- ================= FIM DO SEO ================= -->
+
+    <!-- Google Fonts: Google Sans (Headings) & Inter (Body) & Playfair Display (Accents) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700;800&family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           1. VARIÁVEIS E BASE
+           ========================================================================== */
+        :root {
+            --bg-dark: #050505; 
+            --bg-card: #0c0c0c;
+            --text-main: #F2F2F2;
+            --text-muted: #A0A0A0;
+            --accent-purple: #8A2BE2; 
+            --accent-purple-glow: rgba(138, 43, 226, 0.4);
+            --accent-coral: #FF4D4D;
+            --accent-green: #25D366; 
+            
+            --font-head: 'Google Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --font-accent: 'Playfair Display', serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-padding { padding: 120px 0; }
+        
+        .highlight { 
+            font-family: var(--font-accent); 
+            font-style: italic; 
+            color: var(--accent-coral); 
+            font-weight: 400; 
+        }
+
+        .highlight-purple {
+            font-family: var(--font-accent); 
+            font-style: italic; 
+            color: var(--accent-purple); 
+            font-weight: 400; 
+        }
+
+        .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        @keyframes float {
+            0% { transform: translateY(0px) scale(1); }
+            100% { transform: translateY(-30px) scale(1.05); }
+        }
+
+        .glow-orb {
+            position: absolute;
+            width: 50vw; height: 50vw;
+            max-width: 600px; max-height: 600px;
+            background: radial-gradient(circle, var(--accent-purple-glow) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: float 8s infinite ease-in-out alternate;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ==========================================================================
+           2. BOTÕES (Super Vivos por Padrão)
+           ========================================================================== */
+        .btn {
+            display: inline-block;
+            padding: 18px 36px;
+            font-family: var(--font-head);
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border: none;
+            text-align: center;
+        }
+
+        /* Botão Principal (Roxo) */
+        .btn-primary {
+            background: var(--accent-purple);
+            color: #fff;
+            box-shadow: 0 0 30px var(--accent-purple-glow);
+        }
+        .btn-primary:hover { 
+            box-shadow: 0 0 50px rgba(138, 43, 226, 0.6); 
+            transform: translateY(-3px);
+        }
+
+        /* Botão Submit (Formulário) */
+        .btn-submit {
+            background: var(--accent-purple);
+            color: #fff;
+            width: 100%;
+            box-shadow: 0 0 30px var(--accent-purple-glow);
+        }
+        .btn-submit:hover {
+            box-shadow: 0 0 50px rgba(138, 43, 226, 0.6); 
+            transform: translateY(-3px);
+        }
+
+        /* Botão WhatsApp (Verde) */
+        .btn-wpp { 
+            background: var(--accent-green); 
+            color: #000; 
+            box-shadow: 0 0 30px rgba(37, 211, 102, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-wpp:hover { 
+            box-shadow: 0 0 50px rgba(37, 211, 102, 0.6);
+            transform: translateY(-3px);
+        }
+        .btn-wpp svg { width: 24px; height: 24px; fill: currentColor; }
+
+        header {
+            position: absolute;
+            top: 0; left: 0; width: 100%;
+            padding: 30px 24px;
+            z-index: 10;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-head);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+        .logo span { color: var(--accent-purple); }
+
+        /* ==========================================================================
+           3. HERO SECTION
+           ========================================================================== */
+        .hero { 
+            position: relative; 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+        }
+        .hero .glow-orb { top: 10%; right: -10%; }
+        
+        .hero-content { max-width: 800px; }
+        .hero h1 { 
+            font-family: var(--font-head); 
+            font-size: clamp(3rem, 8vw, 6rem); 
+            line-height: 1; 
+            margin-bottom: 30px; 
+            letter-spacing: -2px;
+        }
+        .hero p { 
+            font-size: 1.15rem; 
+            border-left: 2px solid var(--accent-purple); 
+            padding-left: 20px; 
+            margin-bottom: 40px; 
+            color: #ddd; 
+            max-width: 500px;
+        }
+
+        /* Classe de SEO Oculto (Apenas Leitores de Tela e o Google veem isso) */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        /* ==========================================================================
+           4. MANIFESTO
+           ========================================================================== */
+        .manifesto {
+            position: relative;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            background: linear-gradient(180deg, var(--bg-dark) 0%, #08030f 50%, var(--bg-dark) 100%);
+        }
+        .manifesto .glow-orb { top: 50%; left: 50%; transform: translate(-50%, -50%); animation: none; width: 800px; height: 800px; opacity: 0.5;}
+        
+        .manifesto h2 { 
+            font-family: var(--font-head); 
+            font-size: 1rem; 
+            letter-spacing: 6px; 
+            text-transform: uppercase; 
+            margin-bottom: 40px; 
+            color: var(--accent-purple); 
+        }
+        .manifesto-text { 
+            font-family: var(--font-accent); 
+            font-size: clamp(1.8rem, 5vw, 3.5rem); 
+            line-height: 1.3; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            color: #fff;
+        }
+
+        /* ==========================================================================
+           5. PORTFÓLIO
+           ========================================================================== */
+        .portfolio .section-title {
+            font-family: var(--font-head);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 60px;
+        }
+
+        .portfolio-grid { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 40px; 
+        }
+        @media (min-width: 768px) {
+            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-card:nth-child(even) { margin-top: 40px; }
+        }
+        @media (min-width: 1024px) {
+            .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 30px; }
+            .portfolio-card:nth-child(even) { margin-top: 0; }
+            .portfolio-card:nth-child(3n+2) { margin-top: 40px; }
+            .portfolio-card:nth-child(3n+3) { margin-top: 80px; }
+        }
+        .portfolio-card { 
+            background: var(--bg-card); 
+            padding: 50px; 
+            border: 1px solid rgba(255,255,255,0.05); 
+            transition: all 0.4s; 
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio-card:hover { 
+            border-color: var(--accent-purple); 
+            box-shadow: 0 10px 40px rgba(138, 43, 226, 0.1);
+            transform: translateY(-5px);
+        }
+        .portfolio-card .metric { 
+            font-family: var(--font-head); 
+            font-size: 3.5rem; 
+            color: var(--accent-coral); 
+            margin-bottom: 10px; 
+            line-height: 1; 
+        }
+        .portfolio-card h3 { 
+            font-family: var(--font-head); 
+            font-size: 1.8rem; 
+            margin-bottom: 15px; 
+        }
+        .portfolio-card p { 
+            color: var(--text-muted); 
+            font-size: 1.05rem; 
+        }
+        .mockup-bar { 
+            width: 100%; 
+            height: 6px; 
+            background: #222; 
+            margin-top: 40px; 
+            border-radius: 4px; 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .mockup-bar::after { 
+            content: ''; 
+            position: absolute; 
+            top:0; left:0; 
+            height:100%; 
+            width: 40%; 
+            background: var(--accent-purple); 
+            transition: width 1s ease;
+        }
+        .portfolio-card:hover .mockup-bar::after { width: 100%; }
+
+        /* ==========================================================================
+           6. SERVIÇOS
+           ========================================================================== */
+        .servicos { position: relative; }
+        .servicos .glow-orb { top: 30%; left: -20%; opacity: 0.6; }
+        
+        .servicos h2 {
+            font-family: var(--font-head);
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .servicos-grid { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 30px; 
+        }
+        @media (min-width: 768px) { 
+            .servicos-grid { grid-template-columns: repeat(3, 1fr); } 
+        }
+        .servicos-card { 
+            background: var(--bg-card);
+            padding: 40px; 
+            border-left: 2px solid #333; 
+            transition: all 0.3s; 
+        }
+        .servicos-card:hover { 
+            border-color: var(--accent-coral); 
+            background: #111;
+        }
+        .servicos-card h3 { 
+            font-family: var(--font-head); 
+            font-size: 1.4rem; 
+            margin-bottom: 20px; 
+        }
+        .servicos-card p { 
+            color: var(--text-muted); 
+            font-size: 1rem; 
+        }
+
+        /* ==========================================================================
+           7. DEPOIMENTOS (HORIZONTAL SCROLL EFFECT)
+           ========================================================================== */
+        .horizontal-section {
+            height: 600vh; /* Controla a duração do scroll horizontal */
+            position: relative;
+        }
+
+        .sticky-wrapper {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .horizontal-section h2 {
+            font-family: var(--font-head);
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 50px;
+            text-align: center;
+            padding: 0 24px;
+        }
+
+        .horizontal-content {
+            display: flex;
+            gap: 40px;
+            /* Respiro lateral inicial */
+            padding-left: 10vw; 
+            will-change: transform;
+            width: max-content; /* Crucial para o tamanho total ser calculado corretamente */
+        }
+
+        /* O "respiro" final forçado (evita que o flexbox corte o padding) */
+        .horizontal-content::after {
+            content: '';
+            width: 10vw;
+            display: block;
+            flex-shrink: 0;
+        }
+
+        .depoimento-card { 
+            flex: 0 0 450px; /* Largura fixa para os cards */
+            background: var(--bg-card); 
+            padding: 60px 50px; 
+            position: relative; 
+            border: 1px solid rgba(255,255,255,0.02);
+            transition: border-color 0.3s;
+        }
+        @media (max-width: 768px) {
+            .depoimento-card { flex: 0 0 320px; padding: 40px 30px; }
+            .horizontal-content::after { width: 15vw; } /* Respiro ajustado no mobile */
+        }
+
+        .depoimento-card:hover { border-color: rgba(138, 43, 226, 0.3); }
+        
+        .depoimento-card .quote { 
+            font-family: var(--font-accent); 
+            font-size: 1.3rem; 
+            font-style: italic; 
+            margin-bottom: 40px; 
+            color: #ddd;
+            line-height: 1.8;
+        }
+        .depoimento-card .author { 
+            display: flex; 
+            align-items: center; 
+            gap: 20px; 
+        }
+        .depoimento-card .avatar { 
+            width: 70px; height: 70px; 
+            background: #222; 
+            border-radius: 50%; 
+            overflow: hidden;
+            border: 2px solid rgba(255,255,255,0.05);
+        }
+        .depoimento-card .avatar img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .depoimento-card .stars { 
+            color: var(--accent-coral); 
+            font-size: 1rem;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+        }
+        .author-info strong { display: block; font-family: var(--font-head); font-size: 1.1rem; color: #fff; }
+        .author-info span { font-size: 0.85rem; color: var(--text-muted); }
+
+        /* ==========================================================================
+           8. FORMULÁRIO
+           ========================================================================== */
+        .contato { position: relative; }
+        .contato .glow-orb { bottom: 0; right: 0; opacity: 0.8; }
+
+        .form-box { 
+            background: #0a0314; 
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            border-radius: 12px; 
+            padding: 80px 50px; 
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        .form-box h2 { 
+            font-family: var(--font-head); 
+            font-size: clamp(2rem, 4vw, 3rem); 
+            margin-bottom: 15px; 
+        }
+        .form-box p { 
+            color: var(--text-muted); 
+            margin-bottom: 40px; 
+            font-size: 1.1rem;
+        }
+        
+        .form-grid { 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 24px; 
+        }
+        @media (min-width: 768px) { 
+            .form-grid { grid-template-columns: 1fr 1fr; } 
+            .full-width { grid-column: 1 / -1; } 
+        }
+        
+        input, textarea { 
+            width: 100%; 
+            font-family: var(--font-body); 
+            font-size: 1rem; 
+            background: rgba(0,0,0,0.4); 
+            border: 1px solid rgba(255,255,255,0.1); 
+            color: #fff; 
+            padding: 18px; 
+            border-radius: 4px;
+            outline: none;
+            transition: all 0.3s;
+        }
+        input:focus, textarea:focus { 
+            border-color: var(--accent-purple); 
+            background: rgba(0,0,0,0.8);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
+        }
+
+        /* ==========================================================================
+           9. WHATSAPP
+           ========================================================================== */
+        .whatsapp-section { 
+            text-align: center; 
+            background: #080808; 
+            border-top: 1px solid #1a1a1a; 
+            position: relative;
+        }
+        .whatsapp-section h2 { 
+            font-family: var(--font-head); 
+            font-size: clamp(2rem, 4vw, 3rem); 
+            margin-bottom: 20px; 
+        }
+        .whatsapp-section p { 
+            color: var(--text-muted); 
+            margin-bottom: 40px; 
+            font-size: 1.1rem; 
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 24px;
+            border-top: 1px solid #111;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Brenda, Copywriter<span>.</span></a>
+    </header>
+
+    <!-- 1. HERO -->
+    <section class="hero fade-in">
+        <div class="glow-orb"></div>
+        <div class="container hero-content">
+            <h1><span class="sr-only">Copywriter para Vendas e Lançamentos - </span>Atenção é a<br><span class="highlight">nova moeda.</span></h1>
+            <p>Eu escrevo. Eles clicam. Você lucra.<br>Simples assim. Agência indie vibe, resultados enterprise.</p>
+            <a href="#contato" class="btn btn-primary" aria-label="Ir para o formulário de contato">Hackear minha conversão</a>
+        </div>
+    </section>
+
+    <!-- 2. MANIFESTO -->
+    <section class="section-padding manifesto fade-in">
+        <div class="glow-orb"></div>
+        <div class="container">
+            <h2><span class="sr-only">O Manifesto do bom Copywriting: </span>Manifesto</h2>
+            <p class="manifesto-text">"Chega de especialistas em marketing com textos de plástico. O mercado implora por <span class="highlight-purple">autenticidade</span>. Eu não escrevo para agradar, escrevo para fazer seu cliente agir."</p>
+        </div>
+    </section>
+
+    <!-- 3. PORTFÓLIO -->
+    <section class="section-padding portfolio fade-in">
+        <div class="container">
+            <h2 class="section-title">Resultados que <span class="highlight">falam alto.</span></h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="metric">3x ROAS</div>
+                    <h3>Campanha Black Friday</h3>
+                    <p>Reestruturação de copy para anúncios e landing page. Foco em urgência real, sem falsos gatilhos.</p>
+                    <div class="mockup-bar"></div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="metric">12%</div>
+                    <h3>Taxa de Conversão LP</h3>
+                    <p>Criação de narrativa autoral para infoproduto high-ticket. Quebra de objeções invisíveis do público.</p>
+                    <div class="mockup-bar" style="background: #222;"><div style="width: 70%; height: 100%; background: var(--accent-coral);"></div></div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="metric">+R$ 150k</div>
+                    <h3>Lançamento via E-mail</h3>
+                    <p>Sequência de 7 dias de antecipação e pitch. Lucro gerado na base quente sem investir 1 real em tráfego pago na fase final.</p>
+                    <div class="mockup-bar" style="background: #222;"><div style="width: 85%; height: 100%; background: var(--accent-purple);"></div></div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="metric">68%</div>
+                    <h3>Retenção no Pitch (VSL)</h3>
+                    <p>Script de 12 minutos focado em storytelling emocional. Substituímos o drama exagerado e mantivemos o público até o momento da compra.</p>
+                    <div class="mockup-bar"></div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="metric">-45% CPA</div>
+                    <h3>Escala em Meta Ads</h3>
+                    <p>Troca de criativos genéricos por hooks provocativos que filtram curiosos. Menos custo por lead e muito mais qualificação.</p>
+                    <div class="mockup-bar" style="background: #222;"><div style="width: 45%; height: 100%; background: var(--accent-green);"></div></div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="metric">42%</div>
+                    <h3>Abertura de Newsletter</h3>
+                    <p>Revitalização de base fria no nicho B2B. Textos que parecem mensagens de um amigo, quebrando a linguagem corporativa chata.</p>
+                    <div class="mockup-bar"></div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="metric">8.5%</div>
+                    <h3>CTR no Advertorial</h3>
+                    <p>Artigo de pré-venda para produto físico encapsulado. Quebra de ceticismo antes mesmo do cliente chegar à página de checkout.</p>
+                    <div class="mockup-bar" style="background: #222;"><div style="width: 60%; height: 100%; background: var(--accent-coral);"></div></div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="metric">R$ 1M+</div>
+                    <h3>Roteiro de Masterclass</h3>
+                    <p>Estruturação completa de copy para evento ao vivo. Do gancho inicial aos 15 minutos de pitch irresistível que zerou as vagas.</p>
+                    <div class="mockup-bar"></div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="metric">+35% LTV</div>
+                    <h3>Funil de Upsell</h3>
+                    <p>Copy focada na venda por impulso imediata (One-Click Upsell). Uma oferta irrecusável apresentada exatamente no pico de dopamina pós-compra.</p>
+                    <div class="mockup-bar" style="background: #222;"><div style="width: 55%; height: 100%; background: var(--accent-purple);"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVIÇOS -->
+    <section class="section-padding servicos fade-in">
+        <div class="glow-orb"></div>
+        <div class="container">
+            <h2>O que eu <span class="highlight-purple">escrevo.</span><span class="sr-only"> Serviços de Copywriter</span></h2>
+            <div class="servicos-grid">
+                <div class="servicos-card">
+                    <h3>Direct Response Copy</h3>
+                    <p>Textos para Landing Pages e Advertoriais focados em uma única coisa: fazer o usuário clicar no botão de compra. Sem enrolação e direto ao ponto.</p>
+                </div>
+                <div class="servicos-card">
+                    <h3>E-mail & CRM</h3>
+                    <p>Newsletters que as pessoas realmente querem ler e automações que vendem enquanto você dorme. Chega daquele spam corporativo chato.</p>
+                </div>
+                <div class="servicos-card">
+                    <h3>Creative Social Ads</h3>
+                    <p>Roteiros para TikTok/Reels e copy para Meta Ads que param o scroll instantaneamente e filtram o público certo logo nos primeiros 3 segundos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. DEPOIMENTOS (HORIZONTAL SCROLL) -->
+    <section class="horizontal-section" id="depoimentos">
+        <div class="sticky-wrapper">
+            <h2>Vozes de quem <span class="highlight">lucrou junto.</span></h2>
+            <div class="horizontal-content">
+                <!-- 1 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"A Brenda pegou um produto chato e transformou em algo que até eu quis comprar de novo. O ROI da campanha pagou o serviço dela em 2 dias."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=lucas" alt="Lucas R."></div>
+                        <div class="author-info">
+                            <strong>Lucas R.</strong>
+                            <span>E-commerce Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Ela não escreve copy, ela desenha arquitetura de persuasão. Nossa taxa de conversão na LP principal simplesmente dobrou após a revisão cirúrgica."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=marina" alt="Marina S."></div>
+                        <div class="author-info">
+                            <strong>Marina S.</strong>
+                            <span>Co-founder Tech SaaS</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"O melhor investimento do nosso lançamento. A Brenda tem um faro absurdo para encontrar o ângulo único do produto. Recomendo de olhos fechados."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=ricardo" alt="Ricardo M."></div>
+                        <div class="author-info">
+                            <strong>Ricardo M.</strong>
+                            <span>CMO @ EdTech</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Finalmente uma copywriter que entende de branding. Ela manteve a alma da marca enquanto injetava elementos de conversão agressiva."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=beatriz" alt="Beatriz V."></div>
+                        <div class="author-info">
+                            <strong>Beatriz V.</strong>
+                            <span>Founder BeautyBrand</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"O script de VSL dela é magnético. A retenção no vídeo saltou de 15% para 48%. Isso muda o jogo de qualquer tráfego direto."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=gustavo" alt="Gustavo F."></div>
+                        <div class="author-info">
+                            <strong>Gustavo F.</strong>
+                            <span>Growth Head</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Trabalhei com grandes agências, mas a atenção aos detalhes da Brenda é superior. Ela estuda o avatar como ninguém. Copy de elite."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=leticia" alt="Letícia K."></div>
+                        <div class="author-info">
+                            <strong>Letícia K.</strong>
+                            <span>Infoprodutora</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 7 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Nossa sequência de e-mails estava morta. Com a Brenda, a taxa de clique subiu 3x e o faturamento da base explodiu em 15 dias."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=daniel" alt="Daniel T."></div>
+                        <div class="author-info">
+                            <strong>Daniel T.</strong>
+                            <span>SaaS Founder</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 8 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Ela não usa templates prontos. É tudo autoral, denso e persuasivo. A Brenda é o segredo por trás do nosso funil mais lucrativo."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=sofia" alt="Sofia G."></div>
+                        <div class="author-info">
+                            <strong>Sofia G.</strong>
+                            <span>Consultora de Negócios</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 9 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Entrega rápida e copy impecável. Ela captou o tom de voz da empresa no primeiro briefing. Parceira estratégica essencial."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=marcos" alt="Marcos P."></div>
+                        <div class="author-info">
+                            <strong>Marcos P.</strong>
+                            <span>Dono de Agência</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 10 -->
+                <div class="depoimento-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Se você quer vender sem parecer um vendedor de carros usados, chame a Brenda. Elegância e conversão na mesma frase."</p>
+                    <div class="author">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?u=fernanda" alt="Fernanda L."></div>
+                        <div class="author-info">
+                            <strong>Fernanda L.</strong>
+                            <span>Product Manager</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FORMULÁRIO -->
+    <section id="contato" class="section-padding contato fade-in">
+        <div class="glow-orb"></div>
+        <div class="container">
+            <div class="form-box">
+                <h2>Pronto para <span class="highlight">converter?</span></h2>
+                <p>Preencha os dados abaixo e eu entro em contato em até 24h para alinharmos.</p>
+                <!-- Formulário com IDs para o JavaScript -->
+                <form id="form-whatsapp" class="form-grid">
+                    <input type="text" id="form_nome" placeholder="Nome Completo" required>
+                    <!-- Campo de telefone com limite de caracteres para caber a máscara (16 caracteres = (00) 0 0000-0000) -->
+                    <input type="tel" id="form_telefone" placeholder="WhatsApp" maxlength="16" required>
+                    <input type="email" id="form_email" placeholder="E-mail Profissional" class="full-width" required>
+                    <textarea id="form_projeto" placeholder="O que você está tentando vender e por que não está funcionando?" class="full-width" style="height: 140px; resize: none;" required></textarea>
+                    <button type="submit" class="btn btn-submit full-width">Solicitar Orçamento no WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. WHATSAPP -->
+    <section class="section-padding whatsapp-section fade-in">
+        <div class="container">
+            <h2>Precisa pra <span class="highlight-purple">ontem?</span></h2>
+            <p>Pula o formulário e me chama direto no WhatsApp. Respondemos na velocidade da luz (ou quase).</p>
+            <!-- Link direto simples para o WhatsApp (Altere o número '5511999999999' pelo seu) -->
+            <a href="https://wa.me/5511999999999?text=Olá,%20Brenda!%20Vim%20pela%20sua%20Landing%20Page%20e%20quero%20conversar%20sobre%20o%20meu%20projeto." target="_blank" class="btn btn-wpp">
+                <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                Chamar no WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="ano-atual"></span> Brenda Michele. Copywriting com intenção e estilo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Atualizar o ano do copyright automaticamente
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+        // MÁSCARA DE TELEFONE: Formatação em tempo real (00) 0 0000-0000
+        const telefoneInput = document.getElementById('form_telefone');
+        telefoneInput.addEventListener('input', function (e) {
+            let v = e.target.value.replace(/\D/g, ''); // Remove tudo que não é número
+            if (v.length > 11) v = v.slice(0, 11); // Limita a 11 dígitos numéricos
+            
+            if (v.length > 2) {
+                v = `(${v.slice(0, 2)}) ${v.slice(2)}`; // Coloca os parênteses
+            }
+            if (v.length > 7) {
+                // Coloca o espaço após o 9 e o traço
+                v = `${v.slice(0, 6)} ${v.slice(6, 10)}-${v.slice(10)}`; 
+            }
+            e.target.value = v;
+        });
+
+        // ENVIO DO FORMULÁRIO PARA O WHATSAPP
+        document.getElementById('form-whatsapp').addEventListener('submit', function(e) {
+            e.preventDefault(); // Impede a página de recarregar
+            
+            // Pega os valores que o cliente digitou
+            const nome = document.getElementById('form_nome').value;
+            const telefone = document.getElementById('form_telefone').value;
+            const email = document.getElementById('form_email').value;
+            const projeto = document.getElementById('form_projeto').value;
+            
+            // === IMPORTANTE: COLOQUE AQUI O SEU NÚMERO ===
+            // Formato: 55 + DDD + Numero. (Não coloque espaços nem traços)
+            const numeroBrenda = "5511999999999"; 
+            
+            // Monta a mensagem estruturada
+            const textoMensagem = `Olá, Brenda! Vi sua Landing Page e quero solicitar um orçamento.%0A%0A*Nome:* ${nome}%0A*WhatsApp:* ${telefone}%0A*E-mail:* ${email}%0A%0A*Sobre o meu projeto:*%0A${projeto}`;
+            
+            // Cria o link do WhatsApp
+            const urlWhatsApp = `https://wa.me/${numeroBrenda}?text=${textoMensagem}`;
+            
+            // Abre o WhatsApp numa nova aba
+            window.open(urlWhatsApp, '_blank');
+        });
+
+        // Intersection Observer para animações de fade-in no Scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Lógica do Scroll Horizontal
+        const horizontalSection = document.querySelector('.horizontal-section');
+        const horizontalContent = document.querySelector('.horizontal-content');
+
+        window.addEventListener('scroll', () => {
+            const sectionOffset = horizontalSection.offsetTop;
+            const sectionHeight = horizontalSection.offsetHeight;
+            const scrollY = window.pageYOffset;
+            const windowHeight = window.innerHeight;
+
+            if (scrollY >= sectionOffset && scrollY <= (sectionOffset + sectionHeight - windowHeight)) {
+                const distance = scrollY - sectionOffset;
+                const scrollableWidth = horizontalContent.scrollWidth - window.innerWidth;
+                const percentage = distance / (sectionHeight - windowHeight);
+                horizontalContent.style.transform = `translateX(-${percentage * scrollableWidth}px)`;
+            } else if (scrollY < sectionOffset) {
+                horizontalContent.style.transform = `translateX(0px)`;
+            } else if (scrollY > (sectionOffset + sectionHeight - windowHeight)) {
+                const scrollableWidth = horizontalContent.scrollWidth - window.innerWidth;
+                horizontalContent.style.transform = `translateX(-${scrollableWidth}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
