@@ -82,10 +82,8 @@ h1, h2, h3 { font-size: inherit; font-weight: inherit; font-family: 'Montserrat'
 .hero-contact a i{font-size:16px;}
 .hero-contact a:hover{color:var(--white)}
 
-.hero-photo{position:relative;overflow:hidden;background:#222;}
+.hero-photo{position:relative;overflow:hidden;background:var(--black);}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;filter:contrast(1.05) saturate(1.05)}
-.hero-photo::before{content:'';position:absolute;left:0;top:0;bottom:0;width:80px;background:linear-gradient(to right,#0D0D0D,transparent);z-index:1}
-.hero-photo::after{content:'';position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to top,#0D0D0D,transparent);z-index:1}
 
 /* RESULTADOS */
 .results{background:var(--gold);width:100%}
@@ -200,7 +198,6 @@ h1, h2, h3 { font-size: inherit; font-weight: inherit; font-family: 'Montserrat'
   .hero-inner{grid-template-columns:1fr;padding:0;}
   .hero-content{padding:60px 40px}
   .hero-photo{height:400px;order:-1}
-  .hero-photo::before{display:none}
   
   .results-inner{grid-template-columns:1fr;padding:32px 40px;gap:24px;}
   .res+.res::before{display:none}
