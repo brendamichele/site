@@ -12,6 +12,8 @@
 <meta name="description" content="Portfólio de Brenda Macedo. Mais de 4 anos transformando comunicação em resultado através de copywriting estratégico, social media e campanhas.">
 <meta name="keywords" content="Brenda Macedo, Copywriter, Social Media, Estratégia de Comunicação, Redatora, Lançamentos, Marketing Digital">
 <meta name="author" content="Brenda Macedo">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#000000">
 
 <link rel="canonical" href="https://seusite.com.br/">
 
@@ -20,12 +22,13 @@
 <meta property="og:url" content="https://seusite.com.br/">
 <meta property="og:title" content="Brenda Macedo | Copywriter e Social Media">
 <meta property="og:description" content="Transformo comunicação em resultado. Conheça meu portfólio de campanhas, copy e estratégias digitais.">
-<meta property="og:image" content="https://seusite.com.br/caminho-para-imagem-de-compartilhamento.jpg">
+<meta property="og:image" content="https://seusite.com.br/brenda-macedo-copywriter.jpg">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Brenda Macedo | Copywriter e Social Media">
 <meta name="twitter:description" content="Mais de 4 anos transformando comunicação em resultado através de copywriting estratégico e campanhas.">
+<meta name="twitter:image" content="https://seusite.com.br/brenda-macedo-copywriter.jpg">
 
 <!-- Estruturação de Dados para o Google (Schema.org) -->
 <script type="application/ld+json">
@@ -33,13 +36,21 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Brenda Macedo",
-  "jobTitle": "Copywriter e Social Media",
+  "jobTitle": "Copywriter e Especialista em Social Media",
   "url": "https://seusite.com.br/",
   "email": "brendamichele183@gmail.com",
   "sameAs": [
     "https://www.linkedin.com/in/brenda-cunha-ab330b266/"
   ],
-  "description": "Transformo comunicação em resultado. Mais de 4 anos criando estratégias, campanhas e conteúdos que geram impacto direto em vendas, leads e posicionamento de marca."
+  "description": "Transformo comunicação em resultado. Mais de 4 anos criando estratégias, campanhas e conteúdos que geram impacto direto em vendas, leads e posicionamento de marca.",
+  "knowsAbout": [
+    "Copywriting Estratégico",
+    "Social Media",
+    "Lançamentos Digitais",
+    "Atendimento ao Cliente",
+    "SEO",
+    "E-mail Marketing"
+  ]
 }
 </script>
 
@@ -438,7 +449,7 @@ h1, h2, h3 { font-size: inherit; font-weight: inherit; font-family: 'Montserrat'
   <!-- SCRIPT DE ANIMAÇÕES -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // 1. Atualiza o ano do portfólio automaticamente (agora suporta múltiplos elementos)
+      // 1. Atualiza o ano do portfólio automaticamente
       const anosAtuais = document.querySelectorAll('.ano-atual');
       anosAtuais.forEach(el => {
         el.textContent = new Date().getFullYear();
@@ -456,7 +467,7 @@ h1, h2, h3 { font-size: inherit; font-weight: inherit; font-family: 'Montserrat'
         }
       });
 
-      // 2. Observer para saber quando o elemento entrou na tela
+      // 3. Observer para saber quando o elemento entrou na tela
       const observer = new IntersectionObserver((entries, obs) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
