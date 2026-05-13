@@ -22,13 +22,13 @@
 <meta property="og:url" content="https://brendacopy.site/">
 <meta property="og:title" content="Brenda Macedo | Copywriter e Estrategista">
 <meta property="og:description" content="Profissional de comunicação com mais de 4 anos de experiência em copywriting, social media e estratégia digital.">
-<meta property="og:image" content="https://brendacopy.site/brenda-macedo-copywriter-branca.jpeg">
+<meta property="og:image" content="https://brendacopy.site/brenda-macedo-copywriter.jpg">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Brenda Macedo | Copywriter e Social Media">
 <meta name="twitter:description" content="Transformando comunicação em resultado. Mais de 4 anos de experiência em estratégia digital.">
-<meta name="twitter:image" content="https://brendacopy.site/brenda-macedo-copywriter-branca.jpeg">
+<meta name="twitter:image" content="https://brendacopy.site/brenda-macedo-copywriter.jpg">
 
 <!-- Estruturação de Dados para o Google (Schema.org) -->
 <script type="application/ld+json">
@@ -89,8 +89,23 @@ h1, h2, h3 { font-size: inherit; font-weight: inherit; font-family: 'Intel One M
 .hero-contact a i{font-size:16px;}
 .hero-contact a:hover{color:var(--white)}
 
-.hero-photo{position:relative;overflow:hidden;background:#000000;}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 15%;display:block;}
+.hero-photo{position:relative;display:flex;justify-content:center;align-items:center;}
+.hero-photo img{
+  width:100%;
+  max-width:380px;
+  height:auto;
+  display:block;
+  border-radius:50%;
+  box-shadow: 0 15px 45px rgba(184,151,58,0.15); /* Brilho dourado sutil */
+  animation: float 6s ease-in-out infinite; /* Efeito flutuante */
+}
+
+/* Animação de Flutuação */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
 
 /* RESULTADOS */
 .results{background:var(--gold);width:100%}
@@ -174,7 +189,7 @@ h1, h2, h3 { font-size: inherit; font-weight: inherit; font-family: 'Intel One M
 @media(max-width:768px){
   .hero-inner{grid-template-columns:1fr;padding:0;}
   .hero-content{padding:60px 40px}
-  .hero-photo{height:400px}
+  .hero-photo{height:auto; padding: 40px 0;}
   
   .results-inner{grid-template-columns:1fr;padding:32px 40px;gap:24px;}
   .res+.res::before{display:none}
@@ -189,9 +204,9 @@ h1, h2, h3 { font-size: inherit; font-weight: inherit; font-family: 'Intel One M
   .container{padding:0 24px}
   .hero-content{padding:48px 24px}
   .hero-name{font-size:40px}
-  .hero-photo{height:300px}
+  .hero-photo img {max-width: 280px;}
   .sec{padding:60px 0}
-  .card{padding:24px}
+  .sk-grid{grid-template-columns:1fr}
   .cta{padding:60px 24px}
   .cta-title{font-size:28px}
 }
@@ -219,11 +234,12 @@ h1, h2, h3 { font-size: inherit; font-weight: inherit; font-family: 'Intel One M
         </div>
       </div>
       <div class="hero-photo reveal">
-        <img src="brenda-macedo-copywriter-branca.jpeg" alt="Brenda Macedo - Copywriter e Estrategista Digital" onerror="this.src='https://via.placeholder.com/600x800?text=Brenda+Macedo'">
+        <img src="brenda-macedo-copywriter.png" alt="Brenda Macedo - Copywriter e Estrategista Digital" onerror="this.src='https://via.placeholder.com/400x400?text=Brenda+Macedo'">
       </div>
     </div>
   </header>
 
+  <!-- RESULTADOS -->
   <section class="results" aria-label="Resultados Alcançados">
     <div class="container results-inner">
       <div class="res reveal">
